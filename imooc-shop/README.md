@@ -1,4 +1,4 @@
-# mook-shop
+# imooc-shop
 
 > 慕课网的一个商城项目
 

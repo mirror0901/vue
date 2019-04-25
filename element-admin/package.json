@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "codemirror": "5.39.2",
     "dropzone": "5.2.0",
     "echarts": "4.1.0",
     "element-ui": "2.4.6",

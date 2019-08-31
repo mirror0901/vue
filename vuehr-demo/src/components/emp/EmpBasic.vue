@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <el-container>
+      <el-header style="">
+        <div>
+          <el-input></el-input>
+          <el-button></el-button>
+          <el-button></el-button>
+        </div>
+        <div>
+          <el-upload></el-upload>
+          <el-button></el-button>
+          <el-button></el-button>
+        </div>
+      </el-header>
+      <el-main></el-main>
+    </el-container>
+    <el-form></el-form>
+  </div>
+</template>

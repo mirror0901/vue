@@ -1,5 +1,7 @@
 <template>
   <div>
-    <h1>综合信息统计</h1>
+    <h1>
+      职称管理
+    </h1>
   </div>
 </template>

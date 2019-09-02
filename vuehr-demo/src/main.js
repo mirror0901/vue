@@ -18,29 +18,30 @@ import 'font-awesome/css/font-awesome.min.css'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
-Vue.prototype.getRequest = getRequest;
-Vue.prototype.postRequest = postRequest;
-Vue.prototype.deleteRequest = deleteRequest;
-Vue.prototype.putRequest = putRequest;
-Vue.prototype.isNotNullORBlank = isNotNullORBlank;
+Vue.prototype.getRequest = getRequest
+Vue.prototype.postRequest = postRequest
+Vue.prototype.deleteRequest = deleteRequest
+Vue.prototype.putRequest = putRequest
+Vue.prototype.isNotNullORBlank = isNotNullORBlank
 
-router.beforeEach((to, from, next)=> {
+router.beforeEach((to, from, next) => {
     if (to.name == 'Login') {
-      next();
-      return;
+      next()
+      return
     }
-    var name = store.state.user.name;
+    var name = store.state.user.name
     if (name == '未登录') {
       if (to.meta.requireAuth || to.name == null) {
         next({path: '/', query: {redirect: to.path}})
       } else {
-        next();
+        next()
       }
     } else {
-      initMenu(router, store);
-      if(to.path=='/chat')
-        store.commit("updateMsgList", []);
-      next();
+      initMenu(router, store)
+      if (to.path == '/chat') {
+        store.commit('updateMsgList', [])
+      }
+      next()
     }
   }
 )

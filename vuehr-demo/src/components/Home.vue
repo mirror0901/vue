@@ -8,7 +8,7 @@
             <i class="fa fa-bell-o" @click="goChat" style="cursor: pointer"></i>
           </el-badge>
           <el-dropdown @command="handleCommand">
-            <span class="el-dropdown-link home_userInfo" style="display: flex;align-items: center">
+            <span class="el-dropdown-link home_userinfo" style="display: flex;align-items: center">
               {{user.name}}
               <i><img v-if="user.userface !=''" :src="user.userface"
                       style="width: 40px;height: 40px;margin-right: 5px;margin-left: 5px;border-radius: 40px"/></i>
@@ -16,7 +16,7 @@
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item>个人中心</el-dropdown-item>
               <el-dropdown-item>设置</el-dropdown-item>
-              <el-dropdown-item @command="logout" divided>注销</el-dropdown-item>
+              <el-dropdown-item command="logout" divided>注销</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -53,7 +53,6 @@
               <router-view v-if="this.$route.meta.keepAlive"></router-view>
             </keep-alive>
             <router-view v-if="!this.$route.meta.keepAlive"></router-view>
-            我什么内容都没有
           </el-main>
         </el-container>
       </el-container>
@@ -123,7 +122,7 @@ export default {
     user () {
       return this.$store.state.user
     },
-    router () {
+    routes () {
       return this.$store.state.routes
     }
   }
@@ -131,7 +130,7 @@ export default {
 </script>
 <style>
   .home-container {
-    height: 100px;
+    height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -182,5 +181,4 @@ export default {
     width: 180px;
     min-width: 175px;
   }
-
 </style>

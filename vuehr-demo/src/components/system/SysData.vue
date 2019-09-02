@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>综合信息统计</h1>
+    <h1>备份恢复数据库</h1>
   </div>
 </template>

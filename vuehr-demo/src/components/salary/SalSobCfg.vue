@@ -70,7 +70,7 @@
                 </div>
                 <div>
                   <el-tag size="mini">养老金比率</el-tag>
-                  ￥{{scope.row.salary.pensionPer}}
+                  {{scope.row.salary.pensionPer}}
                 </div>
                 <div>
                   <el-tag size="mini">公积金基数</el-tag>
@@ -78,7 +78,7 @@
                 </div>
                 <div>
                   <el-tag size="mini">公积金比率</el-tag>
-                  ￥{{scope.row.salary.accumulationFundPer}}
+                  {{scope.row.salary.accumulationFundPer}}
                 </div>
                 <div>
                   <el-tag size="mini">医疗保险基数</el-tag>
@@ -86,7 +86,7 @@
                 </div>
                 <div>
                   <el-tag size="mini">医疗保险比率</el-tag>
-                  ￥{{scope.row.salary.medicaPer}}
+                  {{scope.row.salary.medicalPer}}
                 </div>
               </template>
             </div>
@@ -161,7 +161,7 @@
       loadSalaries () {
         let _this = this
         this.getRequest('/salary/sobcfg/salaries').then(resp => {
-          if (resp && resp === 200) {
+          if (resp && resp.status === 200) {
             _this.salaries = resp.data
           }
         })
